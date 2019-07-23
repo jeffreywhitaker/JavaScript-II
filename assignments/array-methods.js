@@ -100,5 +100,18 @@ runners.forEach(function(runner){
 console.log(nameDonation);
 
 // Problem 2
+let largeAndSmallShirts = [];
+largeAndSmallShirts = runners.filter(function (arrayItem){
+    if(arrayItem.shirt_size === "L" || arrayItem.shirt_size === "S"){
+        return true;
+    } else return false;
+})
+console.log(largeAndSmallShirts);
 
 // Problem 3
+let allCapsLastName = [];
+allCapsLastName = runners.map(function(arrayItem){
+    return arrayItem.last_name.toUpperCase();
+});
+
+console.log(allCapsLastName); 
