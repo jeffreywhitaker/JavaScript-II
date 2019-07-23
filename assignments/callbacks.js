@@ -68,9 +68,9 @@ multiplyNums( 3, 15, function(result){
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  if (cb(list[i].includes(item))){
-    true
-  } else false;
+  if (list.includes(item)){
+    return cb(true)
+  } else {return cb(false)};
 }
 
 contains( 'Pencil', items, function(response){
