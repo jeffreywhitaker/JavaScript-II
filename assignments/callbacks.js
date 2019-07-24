@@ -30,6 +30,9 @@ function getLength(arr, cb) {
   return cb(arr.length);
 }
 
+function logThing() {
+  
+}
 getLength(items, function(length){
   console.log(length)
 });
@@ -83,4 +86,15 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  let uniqueValues = [];
+  for (i = 0; i<array.length, i++){
+    if (!uniqueValues.includes(array[i])){
+      uniqueValues.push(array[i]);
+    }
+  }
+  return cb(uniqueValues);
 }
+
+removeDuplicates(items, function(array){
+  console.log(array)
+})
